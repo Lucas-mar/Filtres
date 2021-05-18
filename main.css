@@ -1,0 +1,153 @@
+/* Généralisation */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;900&display=swap');
+
+:root {
+  --black: #222831;
+  --grey: #393e46;
+  --white: #e8e8e8;
+  --blue: #00adb5;
+}
+
+#mycanvas {
+  display: none;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  color: var(--white);
+  font-size: 12px;
+  background: var(--black);
+}
+
+button {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  color: var(--black);
+}
+
+.copyright {
+  text-align: center;
+  font-weight: 300;
+  color: var(--white);
+}
+
+a {
+  text-decoration: none;
+  color: var(--blue);
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.buttons {
+  display: flex;
+}
+
+.video {
+  display: flex;
+  align-items: center;
+}
+
+/* Animation des icons */
+
+.icon-enter::after {
+  box-shadow: inset 0 0 0 1px var(--blue);
+}
+
+.icon-enter::before {
+  border-radius: 0;
+  margin-left: -100%;
+  box-shadow: inset 0 0 0 60px var(--blue);
+}
+
+.icon-enter:hover::before {
+  margin-left: 0;
+}
+
+.icon {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  margin-left: 12px;
+  margin-right: 12px;
+  border-radius: 30px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.icon::before, .icon::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  border-radius: 30px;
+}
+
+.icon i {
+  position: relative;
+  color: var(--white);
+  font-size: 30px;
+  margin-top: 15px;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+/* Animation des buttons */
+
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.buttons button {
+  transition-duration: 0.4s;
+  border-radius: 4px;
+  background-color: var(--black);
+  border: none;
+  color: var(--blue);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  padding: 10px 24px;
+  border: 2px solid var(--blue);
+  margin: 10px;
+  cursor: pointer;
+  outline: none;
+}
+
+.buttons button:hover {
+  background-color: var(--blue);
+  color: var(--white);
+}
+
+.buttons .title {
+  display: flex;
+  align-items: center;
+  margin-right: 50px;
+  font-size: 12px;
+}
+
+/* Photo */
+.photo {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.flexChart {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-top: 10px;
+}

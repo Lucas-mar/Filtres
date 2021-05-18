@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+      <title>Traitement d'image</title>
+
+  		<link rel="stylesheet" href="main.css" type="text/css" media="all">
+
+      <script src="https://kit.fontawesome.com/f69c2bce58.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    </head>
+
+    <body>
+      <div class="video">
+        <video id="video">Video stream not available.</video>
+        <div id="startbutton" class="icon icon-enter"><i class="fas fa-camera"></i></div>
+      </div>
+
+      <div class="buttons">
+        <div class="title">
+          <h2>Image sans voisinage</h2>
+        </div>
+        <div class="rowButtons">
+          <button id="invertbutton">Négatif</button>
+          <button id="graybutton">Gris</button>
+          <button id="blackbutton">Noir et blanc</button>
+          <button id="redcanalbutton">Canal rouge</button>
+          <button id="addnoisebutton">Ajouter du bruit</button>
+          <button id="tvnoisebutton">Bruit TV</button>
+          <button id="addluminositybutton">+ de luminosité</button>
+          <button id="removeluminositybutton">- de luminosité</button>
+        </div>
+      </div>
+
+      <div class="buttons">
+        <div class="title">
+          <h2>Image avec voisinage</h2>
+        </div>
+        <div class="rowButtons">
+          <button id="verticalmirrorbutton">Miroir vertical</button>
+          <button id="horizontalmirrorbutton">Miroir horizontal</button>
+          <button id="blurbutton">Flou</button>
+          <button id="frenchybutton">Drapeau français</button>
+        </div>
+      </div>
+
+      <div class="photo">
+        <canvas id="mycanvas"></canvas>
+        <img id="photo" alt="The screen capture will appear in this box.">
+        <div class="flexChart">
+          <canvas id="myChart" width="400" height="400"></canvas>
+        </div>
+      </div>
+
+   
+      <script src="chart.js"></script>
+      <script src="capture.js"></script>
+      <script src="filter.js"></script>
+  	</body>
+</html>
